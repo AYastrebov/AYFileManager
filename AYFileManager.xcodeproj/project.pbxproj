@@ -18,6 +18,11 @@
 		BC1831C618B388FB00F13346 /* AYFileManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BC1831C518B388FB00F13346 /* AYFileManagerTests.m */; };
 		BC1831D018B3891900F13346 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BC1831CF18B3891800F13346 /* libz.dylib */; };
 		BC1831E518B389B300F13346 /* AYFileManager+ZIP.m in Sources */ = {isa = PBXBuildFile; fileRef = BC1831E418B389B300F13346 /* AYFileManager+ZIP.m */; };
+		BC1831F318B38B5400F13346 /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = BC1831E918B38B5400F13346 /* ioapi.c */; };
+		BC1831F418B38B5400F13346 /* mztools.c in Sources */ = {isa = PBXBuildFile; fileRef = BC1831EB18B38B5400F13346 /* mztools.c */; };
+		BC1831F518B38B5400F13346 /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = BC1831ED18B38B5400F13346 /* unzip.c */; };
+		BC1831F618B38B5400F13346 /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = BC1831EF18B38B5400F13346 /* zip.c */; };
+		BC1831F718B38B5400F13346 /* SSZipArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = BC1831F218B38B5400F13346 /* SSZipArchive.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +63,17 @@
 		BC1831CF18B3891800F13346 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BC1831E318B389B300F13346 /* AYFileManager+ZIP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AYFileManager+ZIP.h"; sourceTree = "<group>"; };
 		BC1831E418B389B300F13346 /* AYFileManager+ZIP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AYFileManager+ZIP.m"; sourceTree = "<group>"; };
+		BC1831E818B38B5400F13346 /* crypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypt.h; sourceTree = "<group>"; };
+		BC1831E918B38B5400F13346 /* ioapi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ioapi.c; sourceTree = "<group>"; };
+		BC1831EA18B38B5400F13346 /* ioapi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ioapi.h; sourceTree = "<group>"; };
+		BC1831EB18B38B5400F13346 /* mztools.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mztools.c; sourceTree = "<group>"; };
+		BC1831EC18B38B5400F13346 /* mztools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mztools.h; sourceTree = "<group>"; };
+		BC1831ED18B38B5400F13346 /* unzip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = unzip.c; sourceTree = "<group>"; };
+		BC1831EE18B38B5400F13346 /* unzip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unzip.h; sourceTree = "<group>"; };
+		BC1831EF18B38B5400F13346 /* zip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = zip.c; sourceTree = "<group>"; };
+		BC1831F018B38B5400F13346 /* zip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zip.h; sourceTree = "<group>"; };
+		BC1831F118B38B5400F13346 /* SSZipArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSZipArchive.h; sourceTree = "<group>"; };
+		BC1831F218B38B5400F13346 /* SSZipArchive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSZipArchive.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +133,7 @@
 		BC1831AB18B388FB00F13346 /* AYFileManager */ = {
 			isa = PBXGroup;
 			children = (
+				BC1831E618B38B5400F13346 /* SSZipArchive */,
 				BC1831AE18B388FB00F13346 /* AYFileManager.h */,
 				BC1831B018B388FB00F13346 /* AYFileManager.m */,
 				BC1831E318B389B300F13346 /* AYFileManager+ZIP.h */,
@@ -150,6 +167,33 @@
 				BC1831C218B388FB00F13346 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BC1831E618B38B5400F13346 /* SSZipArchive */ = {
+			isa = PBXGroup;
+			children = (
+				BC1831E718B38B5400F13346 /* minizip */,
+				BC1831F118B38B5400F13346 /* SSZipArchive.h */,
+				BC1831F218B38B5400F13346 /* SSZipArchive.m */,
+			);
+			name = SSZipArchive;
+			path = ssziparchive/SSZipArchive;
+			sourceTree = SOURCE_ROOT;
+		};
+		BC1831E718B38B5400F13346 /* minizip */ = {
+			isa = PBXGroup;
+			children = (
+				BC1831E818B38B5400F13346 /* crypt.h */,
+				BC1831E918B38B5400F13346 /* ioapi.c */,
+				BC1831EA18B38B5400F13346 /* ioapi.h */,
+				BC1831EB18B38B5400F13346 /* mztools.c */,
+				BC1831EC18B38B5400F13346 /* mztools.h */,
+				BC1831ED18B38B5400F13346 /* unzip.c */,
+				BC1831EE18B38B5400F13346 /* unzip.h */,
+				BC1831EF18B38B5400F13346 /* zip.c */,
+				BC1831F018B38B5400F13346 /* zip.h */,
+			);
+			path = minizip;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,7 +277,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC1831F318B38B5400F13346 /* ioapi.c in Sources */,
+				BC1831F518B38B5400F13346 /* unzip.c in Sources */,
 				BC1831B118B388FB00F13346 /* AYFileManager.m in Sources */,
+				BC1831F618B38B5400F13346 /* zip.c in Sources */,
+				BC1831F418B38B5400F13346 /* mztools.c in Sources */,
+				BC1831F718B38B5400F13346 /* SSZipArchive.m in Sources */,
 				BC1831E518B389B300F13346 /* AYFileManager+ZIP.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -419,6 +468,7 @@
 				BC1831CB18B388FB00F13346 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BC1831CC18B388FB00F13346 /* Build configuration list for PBXNativeTarget "AYFileManagerTests" */ = {
 			isa = XCConfigurationList;
@@ -427,6 +477,7 @@
 				BC1831CE18B388FB00F13346 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
