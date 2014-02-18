@@ -23,6 +23,13 @@
 		BC1831F518B38B5400F13346 /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = BC1831ED18B38B5400F13346 /* unzip.c */; };
 		BC1831F618B38B5400F13346 /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = BC1831EF18B38B5400F13346 /* zip.c */; };
 		BC1831F718B38B5400F13346 /* SSZipArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = BC1831F218B38B5400F13346 /* SSZipArchive.m */; };
+		BC1831F818B38BEF00F13346 /* SSZipArchive.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = BC1831F118B38B5400F13346 /* SSZipArchive.h */; };
+		BC1831F918B38BEF00F13346 /* AYFileManager+ZIP.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = BC1831E318B389B300F13346 /* AYFileManager+ZIP.h */; };
+		BC1831FA18B38C9000F13346 /* crypt.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = BC1831E818B38B5400F13346 /* crypt.h */; };
+		BC1831FB18B38C9000F13346 /* ioapi.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = BC1831EA18B38B5400F13346 /* ioapi.h */; };
+		BC1831FC18B38C9000F13346 /* mztools.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = BC1831EC18B38B5400F13346 /* mztools.h */; };
+		BC1831FD18B38C9000F13346 /* unzip.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = BC1831EE18B38B5400F13346 /* unzip.h */; };
+		BC1831FE18B38C9000F13346 /* zip.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = BC1831F018B38B5400F13346 /* zip.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +49,13 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
+				BC1831FA18B38C9000F13346 /* crypt.h in CopyFiles */,
+				BC1831FB18B38C9000F13346 /* ioapi.h in CopyFiles */,
+				BC1831FC18B38C9000F13346 /* mztools.h in CopyFiles */,
+				BC1831FD18B38C9000F13346 /* unzip.h in CopyFiles */,
+				BC1831FE18B38C9000F13346 /* zip.h in CopyFiles */,
+				BC1831F818B38BEF00F13346 /* SSZipArchive.h in CopyFiles */,
+				BC1831F918B38BEF00F13346 /* AYFileManager+ZIP.h in CopyFiles */,
 				BC1831AF18B388FB00F13346 /* AYFileManager.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
